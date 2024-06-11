@@ -1,0 +1,20 @@
+@use "bulma/sass/utilities/mixins";
+.modal-card {
+    width: $modal-card-width;
+  }
+  .modal-card-head, .modal-card-foot {
+    padding: 16px;
+  }
+  .modal-card-foot {
+    background-color: $modal-card-foot-background-color;
+  }
+  p.modal-card-title{
+    margin-bottom: 0 !important;
+  }
+  
+  @include mixins.mobile {
+    .modal .modal-card {
+      width: $modal-card-width-mobile;
+      margin: 0 auto;
+    }
+  }

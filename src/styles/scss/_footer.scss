@@ -1,0 +1,15 @@
+@use "bulma/sass/utilities/mixins";
+footer.footer {
+    .logo {
+        img {
+        width: auto;
+        height: $footer-logo-height;
+        }
+    }
+    }
+
+    @include mixins.mobile {
+    .footer-copyright {
+        text-align: center;
+    }
+}

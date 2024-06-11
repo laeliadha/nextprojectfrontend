@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
-import "bulma/css/bulma.css";
+import './styles/scss/app.scss';
 import axios from "axios";
 
 // agar setiap request ke server menggunakan credential, karena berlaku secara global di index.js

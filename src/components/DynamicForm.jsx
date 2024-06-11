@@ -46,14 +46,13 @@ const DynamicForm = ({ fields, initialData, onSubmit, errorMsg, formClassName, f
               />
             ) : field.type === 'radio' ? (
               field.options.map(option => (
-                <label key={option.value} className={field.radioLabelClassName}>
+                <label key={option.value} className='radio'>
                   <input
                     type="radio"
                     name={field.name}
                     value={option.value}
                     checked={formData[field.name] === option.value}
                     onChange={handleChange}
-                    className={field.className}
                   />
                   {option.label}
                 </label>

@@ -1,0 +1,76 @@
+/* Theme style (colors & sizes) */
+@import "theme-default";
+
+/* Core Libs & Lib configs */
+@import "node_modules/bulma/bulma";
+
+/* Mixins */
+@import "mixins";
+
+/* Theme components */
+@import "nav-bar";
+@import "aside";
+@import "title-bar";
+@import "hero-bar";
+@import "card";
+@import "table";
+@import "tiles";
+@import "form";
+@import "main-section";
+@import "modal";
+@import "footer";
+@import "misc";
+
+// Import the Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+.app {
+    display: flex;
+  }
+  
+  .aside-menu {
+    margin-top: var(--bulma-navbar-height);
+    width: 250px;
+    display: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    padding: 40px 16px 16px;
+    border-right: $light-border;
+  }
+  
+  .aside-menu.is-active {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .aside-menu {
+      display: none;
+    }
+  
+    .aside-menu.is-active {
+      display: block;
+      position: absolute;
+      background-color: white;
+      z-index: 1000;
+      height: 100%;
+    }
+  
+    .content {
+      margin-left: 0;
+    }
+
+  }
+.content-app{
+  margin-top: var(--bulma-navbar-height);
+  padding-top: 40px;
+}
+  
